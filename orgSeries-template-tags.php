@@ -190,7 +190,7 @@ function get_series_toc( $link = TRUE ) {
 */
 function wp_postlist_count($ser_id = false, $calc = false) {
 	if (!$ser_id && !$calc)
-		return false; //need the $ser_id to caculate the number of posts in the series.
+		return false; //need the $ser_id to calculate the number of posts in the series.
 
 	if (!$ser_id && $calc) {
 		$series = get_the_series();
