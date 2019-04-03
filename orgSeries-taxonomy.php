@@ -90,7 +90,7 @@ function delete_series_post_relationship($postid) {
 	return;
 }
 
-//this will reorder the series parts when a post of a serie is moved to trash.
+//this will reorder the series parts when a post of a series is moved to trash.
 function reset_series_order_on_trash($postid) {
 	$id = (int) $postid;
 	$series = get_the_series($id);
