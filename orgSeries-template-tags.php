@@ -190,7 +190,7 @@ function get_series_toc( $link = TRUE ) {
 */
 function wp_postlist_count($ser_id = false, $calc = false) {
 	if (!$ser_id && !$calc)
-		return false; //need the $ser_id to caculate the number of posts in the series.
+		return false; //need the $ser_id to calculate the number of posts in the series.
 
 	if (!$ser_id && $calc) {
 		$series = get_the_series();
@@ -220,7 +220,7 @@ function wp_postlist_count($ser_id = false, $calc = false) {
  * @uses get_post_meta() - Gets the part of the series the post is from the post metadata table.
  *
  * @param int $id - The Post ID (defaults to 0)
- * @param int $ser_id = The id of the series the post belongs to - REQUIRED inless bool|true is selected for the $calc paramater
+ * @param int $ser_id = The id of the series the post belongs to - REQUIRED unless bool|true is selected for the $calc parameter
  * @param bool $calc = indicates whether the function should try to figure out the $series_id for the user.
  *
  * @return int $series_part - The part the post is in a series IF it is part of a series.
@@ -304,7 +304,7 @@ function wp_seriesmeta_write($excerpt = FALSE) {
  * @uses token_replace() - for replace %tokens% set in the template on the series options page.
  *
  * @param object|int  $series - object contains series id.  Int contains user defined series_id
- * @param bool|string $referral - defaults to false which means run default paramaters.  There are no other values that will be accepted in this paramater for now - I've left this in for future versions of orgSeries.
+ * @param bool|string $referral - defaults to false which means run default parameters.  There are no other values that will be accepted in this paramater for now - I've left this in for future versions of orgSeries.
  *
  * @return bool false if there is no series for the provided series id.
 */
@@ -610,7 +610,7 @@ function get_series_link( $series_id = '' ) {
  * @uses get_orgserial() - calls up the series information for one series by the provided series_Id
  * @uses is_wp_error() - checks to see if the series data returned an error.
  *
- * @param int $series_ID - the series ID required for gettting the series name.
+ * @param int $series_ID - the series ID required for getting the series name.
  *
  * @return string|int $series - if series is_wp_error then a string will be returned with the error else the series name will be returned.
 */
@@ -768,8 +768,8 @@ function series_description($series_id = 0) {
  * @package Organize Series WordPress Plugin
  * @since 2.0
  *
- * @uses get_the_title() - get's the title of the post with the supplied post ID.
- * @uses get_permalink() - get's the permalink of the post with the supplied post ID
+ * @uses get_the_title() - gets the title of the post with the supplied post ID.
+ * @uses get_permalink() - gets the permalink of the post with the supplied post ID
  *
  * @param int $post_ID
  * @param bool $linked - if true then the post will be linked to it's permalink page.
@@ -873,10 +873,10 @@ function is_seriestoc() {
  * @uses series_fit_rect()
  *
  * @param int[-1] $fit_width Maximum width (or desired width if $expanded=true) of the image.
- * @param int[-1] $fit_height Macimum height (or desired height if $expanded=true) of the image.
+ * @param int[-1] $fit_height Maximum height (or desired height if $expanded=true) of the image.
  * @param boolean [false] $expand Whether the image should be expanded to fit the rectangle specified by fit_xxx.
  * @param int $series Series ID. If not specified, the current series is used or the current post's series.
- * @param string $prefix String to echo before the image tag. If no image, no otuput.
+ * @param string $prefix String to echo before the image tag. If no image, no output.
  * @param string $suffix String to echo after the image tag. Ignored if no image found.
  * @param string [] $class  Class attribute for the image tag.
  * @param boolean [1] $link If true the image is made a hyperlink (wrapped by anchor tag).
